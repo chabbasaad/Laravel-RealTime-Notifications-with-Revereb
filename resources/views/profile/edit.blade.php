@@ -24,6 +24,14 @@
                     @include('profile.partials.delete-user-form')
                 </div>
             </div>
+
+            <form method="POST" action="{{ route('profile.test') }}">
+                @csrf
+                <input type="text" name="name" class="p-4 sm:p-8 bg-white dark:bg-gray-800 shadow sm:rounded-lg w-full" placeholder="Name">
+                <button type="submit" class="p-4 sm:p-8 bg-white dark:bg-gray-800 shadow sm:rounded-lg w-full text-left">
+                    {{ __('run event') }}
+                </button>
+            </form>
         </div>
     </div>
 </x-app-layout>
